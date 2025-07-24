@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+   
+    <title>Question 3</title>
+</head>
+<body>
+      <header class="page-header">
+    <h1>צור אירוע חדש</h1>
+  </header>
+
+  <div class="nav-links">
+    <a href="view.html"> הצג אירועים</a>
+  </div>
+
+<main>
+    <form id="faultForm" novalidate>
+  <div class="field">
+    <label for="channelNumber">תעלה מספר</label>
+    <input type="number" id="channelNumber" name="channelNumber" min="1" max="100" required>
+    <div class="error" id="errChannelNumber"></div>
+  </div>
+
+  <div class="field">
+    <label for="scheduledTime">זמן יעד</label>
+    <input type="time" id="scheduledTime" name="scheduledTime" required>
+    <div class="error" id="errScheduledTime"></div>
+  </div>
+
+  <div class="field">
+    <label for="actualTime">זמן נחיתה בפועל</label>
+    <input type="time" id="actualTime" name="actualTime" required>
+    <div class="error" id="errActualTime"></div>
+  </div>
+
+  <div class="field">
+    <label for="faultDescription">תיאור התקלה</label>
+    <textarea id="faultDescription" name="faultDescription" rows="3" minlength="10" required></textarea>
+    <div class="error" id="errFaultDescription"></div>
+  </div>
+
+  <div class="field inline">
+    <input type="checkbox" id="crossedMultiple" name="crossedMultiple">
+    <label for="crossedMultiple">האם יותר מאדם אחד חצה ? </label>
+  </div>
+
+  <div class="field inline">
+    <input type="checkbox" id="securityPresent" name="securityPresent">
+    <label for="securityPresent"> האם קיים סכנת אבטחה ?</label>
+  </div>
+
+  <div class="field">
+    <label for="reporterEmail">אימייל מדווח</label>
+    <input type="email" id="reporterEmail" name="reporterEmail" required>
+    <div class="error" id="errReporterEmail"></div>
+  </div>
+
+  <button type="submit">שלח דיווח</button>
+  <div id="formSuccess" class="success"></div>
+</form>
+</main>
+
+   <script src="script.js" defer></script>
+</body>
+</html>
